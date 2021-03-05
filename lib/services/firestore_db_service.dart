@@ -265,7 +265,7 @@ class FirestoreDbService {
       print(snapshot.docs.length);
       return allUsers;
     } catch (e, t) {
-      _writeErrorMessage('${e} - ${t}');
+      _writeErrorMessage('$e - $t');
       return null;
     }
   }

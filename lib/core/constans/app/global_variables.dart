@@ -1,5 +1,5 @@
 class GlobalVariables {
-  String app_name = 'edusol';
+  String appName = 'edusol';
   String girlAvatar =
       'https://i.pinimg.com/originals/2d/f7/df/2df7df421c88f37cb0385bb1f55a989c.png';
   String manAvatar =
