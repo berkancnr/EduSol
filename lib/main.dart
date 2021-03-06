@@ -36,10 +36,10 @@ class MyApp extends StatelessWidget {
         home: WelcomeScreen(),
         theme: ThemeData.light().copyWith(
           appBarTheme: AppBarTheme(
-            color: const Color(0xFF1ad760),
+            color: Colors.purple,
           ),
           tabBarTheme: TabBarTheme(
-            labelColor: const Color(0xFF1ad760),
+            labelColor: Colors.purple,
             unselectedLabelColor: Colors.grey,
           ),
         ),

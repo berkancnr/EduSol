@@ -1,6 +1,6 @@
+import 'package:edusol/ui/survey/survey.dart';
 import 'package:flutter/material.dart';
-import 'package:edusol/ui/leaderboard/leaderboard_screen.dart';
-import 'package:edusol/ui/map/map_screen.dart';
+import 'package:edusol/ui/mentor/mentor_screen.dart';
 import 'package:edusol/ui/profile/profile_screen.dart';
 
 class RootScreen extends StatefulWidget {
@@ -31,7 +31,7 @@ class _RootScreenState extends State<RootScreen> {
             children: <Widget>[
               Expanded(
                 child: PageView(
-                  children: [MapScreen(), LeaderBoardScreen(), ProfilScreen()],
+                  children: [SurveyScreen(), MentorScreen(), ProfilScreen()],
                   physics: NeverScrollableScrollPhysics(),
                   controller: _pageController,
                 ),
@@ -46,12 +46,12 @@ class _RootScreenState extends State<RootScreen> {
 
   Widget get _tabBarItems => TabBar(
         indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(color: Colors.green, width: 4.0),
+          borderSide: BorderSide(color: Colors.purple, width: 4.0),
           insets: EdgeInsets.fromLTRB(50.0, 0.0, 50.0, 40.0),
         ),
         tabs: <Widget>[
-          Tab(icon: Icon(Icons.map)),
-          Tab(icon: Icon(Icons.home)),
+          Tab(icon: Icon(Icons.short_text)),
+          Tab(icon: Icon(Icons.person)),
           Tab(icon: Icon(Icons.person_pin))
         ],
         onTap: _changePage,

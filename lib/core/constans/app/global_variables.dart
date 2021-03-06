@@ -15,8 +15,8 @@ class GlobalVariables {
   String city = 'Şehir';
   String trabzon = 'Trabzon';
   String creationDate = 'Kayıt Tarihi';
-  String totalUsedBag = 'Toplam Kullanılan Poşet';
-  String totalUsedBottom = 'Toplam Kullanılan Şişe';
+  String age = 'Yaş';
+  String interesting = 'Yetenek alanı';
   String point = 'Puan';
   String totalDonate = 'Toplam Bağış Puanı';
   String donate = 'Bağış Yap';

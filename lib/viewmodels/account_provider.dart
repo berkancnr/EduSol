@@ -167,13 +167,6 @@ class AccountProvider extends ChangeNotifier {
     return result;
   }
 
-  Future<bool> updateUsersLastGeoPoint({String userId}) async {
-    state = AccountState.Updating;
-    var result = _databaseRepository.updateUsersLastGeoPoint(userId: userId);
-    state = AccountState.Idle;
-    return result;
-  }
-
   Future<List<Account>> getNearbyUsers(
       {String userId, GeoPoint geoPoint, int limit = 10}) async {
     state = AccountState.Fetching;

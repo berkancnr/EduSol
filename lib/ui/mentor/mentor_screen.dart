@@ -5,12 +5,12 @@ import 'package:edusol/viewmodels/account_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class LeaderBoardScreen extends StatefulWidget {
+class MentorScreen extends StatefulWidget {
   @override
-  _LeaderBoardScreenState createState() => _LeaderBoardScreenState();
+  _MentorScreenState createState() => _MentorScreenState();
 }
 
-class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
+class _MentorScreenState extends State<MentorScreen> {
   AccountProvider _accountProvider;
 
   @override

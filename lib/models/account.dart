@@ -8,8 +8,6 @@ class Account {
   String password;
   String nameAndSurname;
   String avatar;
-  String geoHash;
-  GeoPoint geoPoint;
   int totalUsedBag;
   int totalUsedBottom;
   int point;
@@ -25,8 +23,6 @@ class Account {
     this.password,
     this.nameAndSurname,
     this.avatar,
-    this.geoHash,
-    this.geoPoint,
     this.totalUsedBag,
     this.totalUsedBottom,
     this.point,
@@ -62,8 +58,6 @@ class Account {
       password: password ?? this.password,
       nameAndSurname: nameAndSurname ?? this.nameAndSurname,
       avatar: avatar ?? this.avatar,
-      geoHash: geoHash ?? this.geoHash,
-      geoPoint: geoPoint ?? this.geoPoint,
       totalUsedBag: totalUsedBag ?? this.totalUsedBag,
       totalUsedBottom: totalUsedBottom ?? this.totalUsedBottom,
       point: point ?? this.point,
@@ -83,8 +77,6 @@ class Account {
       'password': password,
       'nameAndSurname': nameAndSurname,
       'avatar': avatar,
-      'geoHash': geoHash,
-      'geoPoint': geoPoint,
       'totalUsedBag': totalUsedBag,
       'totalUsedBottom': totalUsedBottom,
       'point': point,
@@ -106,8 +98,6 @@ class Account {
       password: map['password'],
       nameAndSurname: map['nameAndSurname'],
       avatar: map['avatar'],
-      geoHash: map['geoHash'],
-      geoPoint: map['geoPoint'],
       totalUsedBag: map['totalUsedBag'],
       totalUsedBottom: map['totalUsedBottom'],
       point: map['point'],
@@ -127,7 +117,7 @@ class Account {
 
   @override
   String toString() {
-    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, geoHash: $geoHash, geoPoint: $geoPoint, totalUsedBag: $totalUsedBag, totalUsedBottom: $totalUsedBottom, point: $point, totalDonate: $totalDonate, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
+    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, totalUsedBag: $totalUsedBag, totalUsedBottom: $totalUsedBottom, point: $point, totalDonate: $totalDonate, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
   }
 
   @override
@@ -140,8 +130,6 @@ class Account {
         o.password == password &&
         o.nameAndSurname == nameAndSurname &&
         o.avatar == avatar &&
-        o.geoHash == geoHash &&
-        o.geoPoint == geoPoint &&
         o.totalUsedBag == totalUsedBag &&
         o.totalUsedBottom == totalUsedBottom &&
         o.point == point &&
@@ -160,8 +148,6 @@ class Account {
         password.hashCode ^
         nameAndSurname.hashCode ^
         avatar.hashCode ^
-        geoHash.hashCode ^
-        geoPoint.hashCode ^
         totalUsedBag.hashCode ^
         totalUsedBottom.hashCode ^
         point.hashCode ^

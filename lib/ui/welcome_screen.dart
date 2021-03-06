@@ -50,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       end: Alignment.bottomCenter,
                       colors: [
                         Colors.white.withOpacity(0.4),
-                        Colors.green.withOpacity(0.5)
+                        Colors.purple.withOpacity(0.5)
                       ],
                     ),
                   ),
@@ -94,7 +94,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             padding: const EdgeInsets.all(12.0),
             child: Text(
               'Giriş Yap',
-              style: GoogleFonts.montserrat(color: Colors.green, fontSize: 18),
+              style: GoogleFonts.montserrat(color: Colors.purple, fontSize: 18),
             ),
           ),
         ),
@@ -111,7 +111,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             width: double.infinity,
             height: 75,
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: Colors.purple,
             ),
             child: Center(
               child: Padding(
@@ -127,7 +127,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Container(
             height: statusBarHeight,
             width: double.infinity,
-            color: Colors.green,
+            color: Colors.purple,
           )
         ],
       ),

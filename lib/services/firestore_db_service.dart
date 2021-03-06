@@ -6,7 +6,6 @@ import 'package:edusol/extensions/geohash_management.dart';
 import 'package:edusol/models/account.dart';
 import 'package:edusol/models/account_query.dart';
 import 'package:edusol/models/recycler_box.dart';
-import 'package:edusol/services/location_service.dart';
 import 'package:uuid/uuid.dart';
 import 'common_api_service.dart';
 
@@ -197,29 +196,6 @@ class FirestoreDbService {
         'twitter': twitter.isNotEmpty ? twitter : null,
         'linkedin': linkedin.isNotEmpty ? linkedin : null,
       });
-
-      return true;
-    } catch (e) {
-      _writeErrorMessage(e.toString());
-      return null;
-    }
-  }
-
-  Future<bool> updateUsersLastGeoPoint({String userId}) async {
-    try {
-      var service = LocationService();
-      var geoPoint = await service.getLocation();
-
-      var geohash =
-          encodeGeohash([geoPoint.latitude, geoPoint.longitude], null);
-
-      await _database
-          .collection('accounts')
-          .doc(userId)
-          .update({'geoPoint': geoPoint, 'geoHash': geohash});
-
-      print(geoPoint.latitude);
-      print(geoPoint.longitude);
 
       return true;
     } catch (e) {

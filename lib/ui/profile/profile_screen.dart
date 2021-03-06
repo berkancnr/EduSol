@@ -54,7 +54,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
             SizedBox(
               height: 10,
             ),
-            Text(_accountProvider.currentAccount.nameAndSurname,
+            Text('isim soyisim',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -82,7 +82,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
         ListTile(
             title: Text(_globalVariables.city,
                 style: TextStyle(
-                  color: Colors.green.shade300,
+                  color: Colors.purple.shade300,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 )),
@@ -92,7 +92,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
         ListTile(
             title: Text(_globalVariables.creationDate,
                 style: TextStyle(
-                  color: Colors.green.shade300,
+                  color: Colors.purple.shade300,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 )),
@@ -102,20 +102,21 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 style: TextStyle(fontSize: 18))),
         Divider(),
         ListTile(
-            title: Text(_globalVariables.totalUsedBag,
-                style: TextStyle(
-                  color: Colors.green.shade300,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                )),
-            subtitle: Text(
-                _accountProvider.currentAccount.totalUsedBag.toString(),
-                style: TextStyle(fontSize: 18))),
+          title: Text(_globalVariables.age,
+              style: TextStyle(
+                color: Colors.purple.shade300,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              )),
+          subtitle: Text(
+              _accountProvider.currentAccount.totalUsedBag.toString(),
+              style: TextStyle(fontSize: 18)),
+        ),
         Divider(),
         ListTile(
-            title: Text(_globalVariables.totalUsedBottom,
+            title: Text(_globalVariables.interesting,
                 style: TextStyle(
-                  color: Colors.green.shade300,
+                  color: Colors.purple.shade300,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 )),
@@ -147,14 +148,14 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
-                      color: Colors.green,
+                      color: Colors.purple,
                     )),
                 Text(
                   _globalVariables.point,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.green,
+                    color: Colors.purple,
                   ),
                 ),
               ],
@@ -172,14 +173,14 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
-                      color: Colors.green,
+                      color: Colors.purple,
                     )),
                 Text(
                   _globalVariables.totalDonate,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.green,
+                    color: Colors.purple,
                   ),
                 ),
               ],
@@ -195,7 +196,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
         child: InkWell(
           onTap: _execDonateScreen,
           child: Card(
-            color: Colors.green,
+            color: Colors.purple,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             elevation: 4.0,
