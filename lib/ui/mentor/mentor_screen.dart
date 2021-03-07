@@ -1,6 +1,7 @@
 import 'package:edusol/core/constans/app/global_variables.dart';
 import 'package:edusol/core/constans/locator.dart';
 import 'package:edusol/models/account.dart';
+import 'package:edusol/ui/mentor/mentor_info.dart';
 import 'package:edusol/viewmodels/account_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -46,18 +47,37 @@ class _MentorScreenState extends State<MentorScreen> {
   }
 
   Widget _singleCard(Account cUser) {
-    return Card(
-        margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage(cUser.avatar),
+    return ElevatedButton(
+        child: Card(
+          margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(cUser.avatar),
+              ),
+              title: Text(cUser.nameAndSurname),
+              trailing: Text(cUser.point.toString()),
             ),
-            title: Text(cUser.nameAndSurname),
-            trailing: Text(cUser.point.toString()),
           ),
-        ));
+        ),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MentorInfo(
+                profilePhoto: Image.network(cUser.avatar),
+                name: 'isim soyisim',
+                communications: [
+                  '05051234567',
+                  'flutter@gmail.com',
+                  'linkedin/sadik-sener',
+                ],
+              ),
+            ),
+          );
+        });
   }
 }
