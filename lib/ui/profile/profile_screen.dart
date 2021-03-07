@@ -43,7 +43,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   CircleAvatar(
-                    backgroundImage: NetworkImage(_globalVariables.girlAvatar),
+                    backgroundImage: NetworkImage(_globalVariables.manAvatar),
                     minRadius: 60.0,
                   ),
                 ]),
@@ -138,7 +138,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(_accountProvider.currentAccount.point.toString(),
+                Text('172',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -163,7 +163,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(_accountProvider.currentAccount.totalStudents.toString(),
+                Text('18',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,

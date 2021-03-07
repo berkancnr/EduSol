@@ -18,6 +18,6 @@ class GlobalVariables {
   String age = 'Yaş';
   String interesting = 'Yetenek alanı';
   String point = 'Puan';
-  String totalDonate = 'Toplam Bağış Puanı';
+  String totalDonate = 'Toplam Öğrenci Sayısı';
   String donate = 'Bağış Yap';
 }

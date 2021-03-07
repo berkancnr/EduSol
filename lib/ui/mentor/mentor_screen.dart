@@ -1,7 +1,6 @@
 import 'package:edusol/core/constans/app/global_variables.dart';
 import 'package:edusol/core/constans/locator.dart';
 import 'package:edusol/models/account.dart';
-import 'package:edusol/ui/mentor/mentor_info.dart';
 import 'package:edusol/viewmodels/account_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
