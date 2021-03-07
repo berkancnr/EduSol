@@ -8,14 +8,14 @@ class GlobalWidgets {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'Nature',
+          text: 'Edu',
           style: GoogleFonts.montserrat(
               fontSize: isInAppBar ? 20 : size,
               fontWeight: FontWeight.w700,
-              color: Colors.green),
+              color: Colors.purple),
           children: [
             TextSpan(
-              text: 'Save',
+              text: 'Sol',
               style: TextStyle(
                   color: isDark ? Colors.black : Colors.white,
                   fontSize: isInAppBar ? 20 : size),

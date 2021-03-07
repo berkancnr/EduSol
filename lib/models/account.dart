@@ -8,10 +8,11 @@ class Account {
   String password;
   String nameAndSurname;
   String avatar;
-  int totalUsedBag;
-  int totalUsedBottom;
-  int point;
-  int totalDonate;
+  String field;
+  int totalStudents;
+  int likeCount;
+  int commentCount;
+  double point;
   bool isBanned;
   bool isDeleted;
   bool isFrozed;
@@ -23,10 +24,11 @@ class Account {
     this.password,
     this.nameAndSurname,
     this.avatar,
-    this.totalUsedBag,
-    this.totalUsedBottom,
-    this.point,
-    this.totalDonate,
+    this.field = 'Yazılım',
+    this.totalStudents = 0,
+    this.likeCount = 0,
+    this.commentCount = 0,
+    this.point = 0.0,
     this.isBanned,
     this.isDeleted,
     this.isFrozed,
@@ -40,12 +42,11 @@ class Account {
     String password,
     String nameAndSurname,
     String avatar,
-    String geoHash,
-    GeoPoint geoPoint,
-    int totalUsedBag,
-    int totalUsedBottom,
-    int point,
-    int totalDonate,
+    String field,
+    int totalStudents,
+    int likeCount,
+    int commentCount,
+    double point,
     bool isBanned,
     bool isDeleted,
     bool isFrozed,
@@ -58,10 +59,11 @@ class Account {
       password: password ?? this.password,
       nameAndSurname: nameAndSurname ?? this.nameAndSurname,
       avatar: avatar ?? this.avatar,
-      totalUsedBag: totalUsedBag ?? this.totalUsedBag,
-      totalUsedBottom: totalUsedBottom ?? this.totalUsedBottom,
+      field: field ?? this.field,
+      totalStudents: totalStudents ?? this.totalStudents,
+      likeCount: likeCount ?? this.likeCount,
+      commentCount: commentCount ?? this.commentCount,
       point: point ?? this.point,
-      totalDonate: totalDonate ?? this.totalDonate,
       isBanned: isBanned ?? this.isBanned,
       isDeleted: isDeleted ?? this.isDeleted,
       isFrozed: isFrozed ?? this.isFrozed,
@@ -77,10 +79,11 @@ class Account {
       'password': password,
       'nameAndSurname': nameAndSurname,
       'avatar': avatar,
-      'totalUsedBag': totalUsedBag,
-      'totalUsedBottom': totalUsedBottom,
+      'field': field,
+      'totalStudents': totalStudents,
+      'likeCount': likeCount,
+      'commentCount': commentCount,
       'point': point,
-      'totalDonate': totalDonate,
       'isBanned': isBanned,
       'isDeleted': isDeleted,
       'isFrozed': isFrozed,
@@ -98,10 +101,11 @@ class Account {
       password: map['password'],
       nameAndSurname: map['nameAndSurname'],
       avatar: map['avatar'],
-      totalUsedBag: map['totalUsedBag'],
-      totalUsedBottom: map['totalUsedBottom'],
+      field: map['field'],
+      totalStudents: map['totalStudents'],
+      likeCount: map['likeCount'],
+      commentCount: map['commentCount'],
       point: map['point'],
-      totalDonate: map['totalDonate'],
       isBanned: map['isBanned'],
       isDeleted: map['isDeleted'],
       isFrozed: map['isFrozed'],
@@ -117,7 +121,7 @@ class Account {
 
   @override
   String toString() {
-    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, totalUsedBag: $totalUsedBag, totalUsedBottom: $totalUsedBottom, point: $point, totalDonate: $totalDonate, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
+    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, field: $field, totalStudents: $totalStudents, likeCount: $likeCount, commentCount: $commentCount, point: $point, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
   }
 
   @override
@@ -130,10 +134,11 @@ class Account {
         o.password == password &&
         o.nameAndSurname == nameAndSurname &&
         o.avatar == avatar &&
-        o.totalUsedBag == totalUsedBag &&
-        o.totalUsedBottom == totalUsedBottom &&
+        o.field == field &&
+        o.totalStudents == totalStudents &&
+        o.likeCount == likeCount &&
+        o.commentCount == commentCount &&
         o.point == point &&
-        o.totalDonate == totalDonate &&
         o.isBanned == isBanned &&
         o.isDeleted == isDeleted &&
         o.isFrozed == isFrozed &&
@@ -148,10 +153,11 @@ class Account {
         password.hashCode ^
         nameAndSurname.hashCode ^
         avatar.hashCode ^
-        totalUsedBag.hashCode ^
-        totalUsedBottom.hashCode ^
+        field.hashCode ^
+        totalStudents.hashCode ^
+        likeCount.hashCode ^
+        commentCount.hashCode ^
         point.hashCode ^
-        totalDonate.hashCode ^
         isBanned.hashCode ^
         isDeleted.hashCode ^
         isFrozed.hashCode ^

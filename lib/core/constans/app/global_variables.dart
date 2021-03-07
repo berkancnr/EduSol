@@ -10,7 +10,7 @@ class GlobalVariables {
   String bagCount = 'Poşet Sayısı';
   String bottleCount = 'Şişe Sayısı';
   String takeBagorBottle = 'Poşet veya Şişe Al';
-  String usersOfWeek = 'Haftanın Kullanıcıları';
+  String mentorsOfWeek = 'Haftanın Mentörleri';
 
   String city = 'Şehir';
   String trabzon = 'Trabzon';

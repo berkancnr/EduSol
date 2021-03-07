@@ -28,7 +28,7 @@ class _MentorScreenState extends State<MentorScreen> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  _globalVariables.usersOfWeek,
+                  _globalVariables.mentorsOfWeek,
                   style: TextStyle(fontSize: 22),
                 ),
               ),
@@ -47,37 +47,19 @@ class _MentorScreenState extends State<MentorScreen> {
   }
 
   Widget _singleCard(Account cUser) {
-    return ElevatedButton(
-        child: Card(
-          margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage(cUser.avatar),
-              ),
-              title: Text(cUser.nameAndSurname),
-              trailing: Text(cUser.point.toString()),
-            ),
+    return Card(
+      margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(cUser.avatar),
           ),
+          title: Text(cUser.nameAndSurname),
+          trailing: Text(cUser.point.toString()),
         ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MentorInfo(
-                profilePhoto: Image.network(cUser.avatar),
-                name: 'isim soyisim',
-                communications: [
-                  '05051234567',
-                  'flutter@gmail.com',
-                  'linkedin/sadik-sener',
-                ],
-              ),
-            ),
-          );
-        });
+      ),
+    );
   }
 }

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:edusol/core/constans/app/global_variables.dart';
 import 'package:edusol/core/constans/app/time_converter.dart';
 import 'package:edusol/core/constans/locator.dart';
-import 'package:edusol/ui/profile/donate_screen.dart';
 import 'package:edusol/viewmodels/account_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -30,7 +27,6 @@ class _ProfilScreenState extends State<ProfilScreen> {
           buildPersonAvatar(),
           Expanded(child: buildContainerPoint()),
           Expanded(flex: 5, child: buildAllMethod()),
-          _donateButton
         ]),
       ),
     );
@@ -54,7 +50,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
             SizedBox(
               height: 10,
             ),
-            Text('isim soyisim',
+            Text(_accountProvider.currentAccount.nameAndSurname,
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -109,7 +105,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 fontWeight: FontWeight.bold,
               )),
           subtitle: Text(
-              _accountProvider.currentAccount.totalUsedBag.toString(),
+              _accountProvider.currentAccount.commentCount.toString(),
               style: TextStyle(fontSize: 18)),
         ),
         Divider(),
@@ -120,8 +116,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 )),
-            subtitle: Text(
-                _accountProvider.currentAccount.totalUsedBottom.toString(),
+            subtitle: Text(_accountProvider.currentAccount.likeCount.toString(),
                 style: TextStyle(fontSize: 18))),
       ],
     );
@@ -168,7 +163,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(_accountProvider.currentAccount.totalDonate.toString(),
+                Text(_accountProvider.currentAccount.totalStudents.toString(),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -189,40 +184,5 @@ class _ProfilScreenState extends State<ProfilScreen> {
         )
       ]),
     );
-  }
-
-  Widget get _donateButton => Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: InkWell(
-          onTap: _execDonateScreen,
-          child: Card(
-            color: Colors.purple,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            elevation: 4.0,
-            child: Row(
-              children: [
-                Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    _globalVariables.donate,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                )),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(FontAwesomeIcons.donate,
-                      size: 50, color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-
-  void _execDonateScreen() {
-    Navigator.of(context).push(platformPageRoute(
-        context: context, builder: (context) => DonateScreen()));
   }
 }

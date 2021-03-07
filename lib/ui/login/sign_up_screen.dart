@@ -118,7 +118,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget get _signUpInfoText {
     var defaultStyle = TextStyle(color: Colors.grey, fontSize: 14.0);
-    var linkStyle = TextStyle(color: Colors.green);
+    var linkStyle = TextStyle(color: Colors.purple);
     return RichText(
       textAlign: TextAlign.center,
       softWrap: true,
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 end: Alignment.centerRight,
                 colors:
                     isQueryable && _accountProvider.state == AccountState.Idle
-                        ? [Colors.lightGreen, Colors.green]
+                        ? [Colors.purpleAccent, Colors.purple]
                         : [Colors.grey, Colors.blueGrey])),
         child: _accountProvider.state == AccountState.Idle
             ? Text(
@@ -200,7 +200,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Text(
               'Giriş Yap',
               style: TextStyle(
-                  color: Colors.green,
+                  color: Colors.purple,
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),

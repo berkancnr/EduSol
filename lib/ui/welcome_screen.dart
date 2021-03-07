@@ -36,7 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: isAuthStateChecked
           ? Stack(
               children: [
-                Image.asset('asset/images/city.jpg',
+                Image.asset('asset/images/baby.jpeg',
                     fit: BoxFit.cover,
                     width: double.infinity,
                     height: double.infinity),
@@ -61,7 +61,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       SizedBox(
                         height: 180,
                       ),
-                      Hero(tag: 'title', child: GlobalWidgets.appTitle()),
+                      Hero(
+                          tag: 'title',
+                          child: GlobalWidgets.appTitle(isDark: false)),
                       Expanded(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,

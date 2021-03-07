@@ -123,7 +123,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 end: Alignment.centerRight,
                 colors:
                     isQueryable && _accountProvider.state == AccountState.Idle
-                        ? [Colors.lightGreen, Colors.green]
+                        ? [Colors.purpleAccent, Colors.purple]
                         : [Colors.grey, Colors.blueGrey])),
         child: _accountProvider.state == AccountState.Idle
             ? Text(
@@ -158,7 +158,7 @@ class _SignInScreenState extends State<SignInScreen> {
             Text(
               'Kayıt Ol',
               style: TextStyle(
-                  color: Colors.green,
+                  color: Colors.purple,
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
